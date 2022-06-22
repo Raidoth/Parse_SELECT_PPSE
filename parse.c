@@ -102,7 +102,7 @@ void printRIDxPIXsort(char* card_answer){
                     ++i;
                     if(i==sizeHexArr){
 
-                        printf("No applications");
+                        printf("No applications\n");
                         break;
 
                     }
@@ -166,7 +166,7 @@ void printRIDxPIXsort(char* card_answer){
     }
     if(cntSuppApp==0){
 
-        printf("NO SUPPORTED APP\n");
+        printf("No supported app\n");
     
     }
 
