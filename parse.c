@@ -93,6 +93,9 @@ void printRIDxPIXsort(char* card_answer){
                 
                 memset(appCardArr[appReadCount].RID,'\0',32);
                 memset(appCardArr[appReadCount].PIX,'\0',10);
+                if(priorityAppEndBit==0){
+                    priorityAppEndBit=20;
+                }
                 appCardArr[appReadCount].priority=priorityAppEndBit;
 
                 while(1){
