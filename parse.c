@@ -41,7 +41,7 @@ void printRIDxPIXsort(char* card_answer){
     }
     //create array app
     appCard_t appCardArr[countApp];
-
+    
     int appReadCount = 0;
     int lenAppBit;
     int lenAppId;
@@ -57,7 +57,7 @@ void printRIDxPIXsort(char* card_answer){
                 ++i;
                 sscanf(HexArr[i], "%x", &lenAppBit);
                 ++i;
-
+                appCardArr[appReadCount].id=appReadCount;
                 while(1){
                     if(!strcmp(HexArr[i],PRIORITY_TEMPLATE)){
                         break;
@@ -94,7 +94,7 @@ void printRIDxPIXsort(char* card_answer){
                 memset(appCardArr[appReadCount].RID,'\0',32);
                 memset(appCardArr[appReadCount].PIX,'\0',10);
                 if(priorityAppEndBit==0){
-                    priorityAppEndBit=20;
+                    priorityAppEndBit=20+appCardArr[appReadCount].id;
                 }
                 appCardArr[appReadCount].priority=priorityAppEndBit;
 

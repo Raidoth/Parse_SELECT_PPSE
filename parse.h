@@ -14,6 +14,7 @@
 #define SUPPCARDLEN 5
 void printRIDxPIXsort(char* card_answer);
 typedef struct {
+    int id;
     char RID[SIZERID];
     char PIX[SIZEPIX];
     int priority;
